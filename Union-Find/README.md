@@ -18,24 +18,24 @@
 ### union操作中，如果p,q的id值相同，则for循环将全部进行修改
    It takes N^2 array accesses to process a sequence of N union commands on N objects.
 
-public class QuickFindUF
-{
+public class QuickFindUF  
+{  
   private int[] id;  
-  public QuickFindUF(int N)
-  {
-    id = new int[N];
-    for(int i = 0; i < N;i++)
-      id[i]=i;
-  }
-  public boolean connected(int p,int q)
-  { return id[p] == id[q];}
-  public void union(int p,int q)
-  {
-    int pid = id[p];
-    int qid = id[q];
-    for(int i = 0; i < id.length; i++)
-      if(id[i] == pid) id[i] = qid;
-  }
+  public QuickFindUF(int N)  
+  {  
+    id = new int[N];  
+    for(int i = 0; i < N;i++)  
+    id[i]=i;  
+   }  
+  public boolean connected(int p,int q)  
+   { return id[p] == id[q];}  
+  public void union(int p,int q)  
+  {  
+    int pid = id[p];  
+    int qid = id[q];  
+    for(int i = 0; i < id.length; i++)  
+      if(id[i] == pid) id[i] = qid;  
+  }  
 }
 
 ## quick-union
