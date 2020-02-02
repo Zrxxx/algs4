@@ -15,7 +15,10 @@
 
 
 ## quick-find
-### public class QuickFindUF
+### union操作中，如果p,q的id值相同，则for循环将全部进行修改
+   It takes N^2 array accesses to process a sequence of N union commands on N objects.
+
+public class QuickFindUF
 {
   private int[] id;  
   public QuickFindUF(int N)
@@ -34,7 +37,7 @@
       if(id[i] == pid) id[i] = qid;
   }
 }
-union操作中，如果p,q的id值相同，则for循环将全部进行修改
+
 ## quick-union
 
 ## union-find
